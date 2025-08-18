@@ -5012,7 +5012,7 @@
 					]
 				},
 				"useConsistentArrowReturn": {
-					"description": "Succinct description of the rule.",
+					"description": "Enforce consistent arrow function bodies.",
 					"anyOf": [
 						{ "$ref": "#/definitions/UseConsistentArrowReturnConfiguration" },
 						{ "type": "null" }
