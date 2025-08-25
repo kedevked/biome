@@ -1692,7 +1692,7 @@ export interface Nursery {
 	/**
 	 * Enforce consistent arrow function bodies.
 	 */
-	useConsistentArrowReturn?: RuleConfiguration_for_UseConsistentArrowReturnOptions;
+	useConsistentArrowReturn?: RuleFixConfiguration_for_UseConsistentArrowReturnOptions;
 	/**
 	 * Enforce type definitions to consistently use either interface or type.
 	 */
@@ -3007,9 +3007,9 @@ export type RuleConfiguration_for_NoVueReservedPropsOptions =
 export type RuleConfiguration_for_UseAnchorHrefOptions =
 	| RulePlainConfiguration
 	| RuleWithOptions_for_UseAnchorHrefOptions;
-export type RuleConfiguration_for_UseConsistentArrowReturnOptions =
+export type RuleFixConfiguration_for_UseConsistentArrowReturnOptions =
 	| RulePlainConfiguration
-	| RuleWithOptions_for_UseConsistentArrowReturnOptions;
+	| RuleWithFixOptions_for_UseConsistentArrowReturnOptions;
 export type RuleFixConfiguration_for_UseConsistentTypeDefinitionsOptions =
 	| RulePlainConfiguration
 	| RuleWithFixOptions_for_UseConsistentTypeDefinitionsOptions;
@@ -5485,7 +5485,11 @@ export interface RuleWithOptions_for_UseAnchorHrefOptions {
 	 */
 	options: UseAnchorHrefOptions;
 }
-export interface RuleWithOptions_for_UseConsistentArrowReturnOptions {
+export interface RuleWithFixOptions_for_UseConsistentArrowReturnOptions {
+	/**
+	 * The kind of the code actions emitted by the rule
+	 */
+	fix?: FixKind;
 	/**
 	 * The severity of the emitted diagnostics by the rule
 	 */
